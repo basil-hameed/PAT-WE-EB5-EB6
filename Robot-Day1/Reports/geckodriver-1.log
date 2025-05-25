@@ -1,0 +1,21 @@
+1748152336890	geckodriver	INFO	Listening on 127.0.0.1:55682
+1748152339911	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55683" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DIGITA~1\\AppData\\Local\\Temp\\rust_mozprofilesUjCE6"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1748152341746	Marionette	INFO	Marionette enabled
+1748152342013	Marionette	INFO	Listening on port 55692
+Read port: 55692
+WebDriver BiDi listening on ws://127.0.0.1:55683
+1748152342201	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Calling WaitFlushedEvent::Run: is delayed: 6022
+1748152361659	Marionette	INFO	Stopped listening on port 55692
+Dynamically enable window occlusion 1
+JavaScript warning: https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015, line 1: Script terminated by timeout at:
+L@https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015:1:12051
+b@https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015:1:11841
+
+JavaScript error: resource://gre/modules/UpdateService.sys.mjs, line 5460: 
+1748152372179	addons.xpi	ERROR	System addon update list error [Exception... "<no message>"  nsresult: "0x8046001e (<unknown>)"  location: "JS frame :: resource://gre/modules/ServiceRequest.sys.mjs :: open :: line 126"  data: no]
+console.error: Region.sys.mjs: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", "resource://gre/modules/Region.sys.mjs", 734))
+console.error: Region.sys.mjs: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.sys.mjs", 407))

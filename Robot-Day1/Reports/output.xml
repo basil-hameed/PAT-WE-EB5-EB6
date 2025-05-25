@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.0 on win32)" generated="2025-05-25T12:38:14.579270" rpa="false" schemaversion="5">
+<suite id="s1" name="TestDragDrop" source="D:\Automation\PAT-EB-6\Robot-Day1\TestCases\TestDragDrop.robot">
+<test id="s1-t1" name="TestCase-1" line="13">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-25T12:38:14.942252" level="INFO">Opening browser 'chrome' to base url 'https://qavbox.github.io/demo/dragndrop/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-25T12:38:14.941869" elapsed="3.577515"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-25T12:38:18.521547" elapsed="0.079790"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-25T12:38:18.602997" elapsed="0.006367"/>
+</kw>
+<doc>Start the automation</doc>
+<tag>start</tag>
+<status status="PASS" start="2025-05-25T12:38:14.940601" elapsed="3.670834"/>
+</test>
+<test id="s1-t2" name="TestCase-2" line="20">
+<kw name="Drag And Drop" owner="SeleniumLibrary">
+<arg>id=draggable</arg>
+<arg>id=droppable</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="PASS" start="2025-05-25T12:38:18.613829" elapsed="0.653925"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-25T12:38:19.270008" level="INFO">Verifying element 'id=droppable' contains exact text 'Dropped!'.</msg>
+<arg>id=droppable</arg>
+<arg>Dropped!</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-05-25T12:38:19.268743" elapsed="0.056846"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-25T12:38:23.326955" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-25T12:38:19.326148" elapsed="4.001205"/>
+</kw>
+<doc>Perform the drag and drop action</doc>
+<tag>dragdrop</tag>
+<status status="PASS" start="2025-05-25T12:38:18.612840" elapsed="4.715481"/>
+</test>
+<test id="s1-t3" name="TestCase-3" line="27">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-05-25T12:38:23.332002" elapsed="2.352543"/>
+</kw>
+<doc>Stop the automation</doc>
+<tag>stop</tag>
+<status status="PASS" start="2025-05-25T12:38:23.330253" elapsed="2.354980"/>
+</test>
+<doc>Drag and Drop using robot framework</doc>
+<status status="PASS" start="2025-05-25T12:38:14.581048" elapsed="11.106314"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">dragdrop</stat>
+<stat pass="1" fail="0" skip="0">start</stat>
+<stat pass="1" fail="0" skip="0">stop</stat>
+</tag>
+<suite>
+<stat name="TestDragDrop" id="s1" pass="3" fail="0" skip="0">TestDragDrop</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
