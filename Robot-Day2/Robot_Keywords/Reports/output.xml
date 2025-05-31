@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2025-05-31T10:48:24.509366" rpa="false" schemaversion="5">
+<suite id="s1" name="TestDemo" source="D:\Automation\PAT-EB-6\Robot_Keywords\TestCases\TestDemo.robot">
+<test id="s1-t1" name="TestCase-1" line="12">
+<kw name="Start automation">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-31T10:48:24.796541" level="INFO">Opening browser 'chrome' to base url 'https://www.guvi.in'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-31T10:48:24.796234" elapsed="4.789710"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-31T10:48:29.586472" elapsed="0.100328"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-31T10:48:29.688381" elapsed="0.004691"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-05-31T10:48:29.978225" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/image_1.png"&gt;&lt;img src="../Screenshots/image_1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/image_1.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-05-31T10:48:29.693575" elapsed="0.284827"/>
+</kw>
+<tag>start, home</tag>
+<doc>Start automation</doc>
+<status status="PASS" start="2025-05-31T10:48:24.795430" elapsed="5.183152"/>
+</kw>
+<status status="PASS" start="2025-05-31T10:48:24.794082" elapsed="5.185074"/>
+</test>
+<test id="s1-t2" name="TestCase-2" line="15">
+<kw name="Stop automation">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-05-31T10:48:29.981407" elapsed="6.487164"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-05-31T10:48:36.469276" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<arg>../Screenshots/image_2.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-05-31T10:48:36.468949" elapsed="0.000441"/>
+</kw>
+<tag>stop, home</tag>
+<doc>Stop the automation</doc>
+<status status="PASS" start="2025-05-31T10:48:29.981005" elapsed="6.488567"/>
+</kw>
+<status status="PASS" start="2025-05-31T10:48:29.980179" elapsed="6.490051"/>
+</test>
+<doc>Testing the guvi.in homepage</doc>
+<status status="PASS" start="2025-05-31T10:48:24.511988" elapsed="11.960248"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="TestDemo">TestDemo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
