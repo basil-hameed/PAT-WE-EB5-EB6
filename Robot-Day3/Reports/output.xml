@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2025-06-01T12:50:24.655786" rpa="false" schemaversion="5">
+<suite id="s1" name="TestDemoblaze" source="D:\Automation\PAT-EB-6\Robot-Day3\TestCases\TestDemoblaze.robot">
+<test id="s1-t1" name="Login Test" line="11">
+<kw name="Navigate to home page" owner="HomePage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:24.888728" level="INFO">Opening browser 'chrome' to base url 'https://demoblaze.com/index.html'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-01T12:50:24.888457" elapsed="5.096710"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-01T12:50:29.986006" elapsed="0.110087"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-06-01T12:50:30.097793" elapsed="0.002790"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:30.346185" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/home_page.png"&gt;&lt;img src="../Screenshots/home_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/home_page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-01T12:50:30.100977" elapsed="0.245310"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:50:24.887677" elapsed="5.458732"/>
+</kw>
+<kw name="Click Login Button" owner="LoginPage">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id=login2</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-06-01T12:50:30.347165" elapsed="0.043086"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:30.390816" level="INFO">Clicking element 'id=login2'.</msg>
+<arg>id=login2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-01T12:50:30.390569" elapsed="0.144858"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:50:30.346858" elapsed="0.188712"/>
+</kw>
+<kw name="Enter Login Credentials" owner="LoginPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=loginusername</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-01T12:50:30.537106" elapsed="0.276113"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:30.814186" level="INFO">Typing text 'eb56@gmail.com' into text field 'id=loginusername'.</msg>
+<arg>id=loginusername</arg>
+<arg>${USER_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-01T12:50:30.813658" elapsed="0.270952"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:31.085697" level="INFO">Typing text 'tester@123' into text field 'id=loginpassword'.</msg>
+<arg>id=loginpassword</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-01T12:50:31.085106" elapsed="0.173829"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:31.259543" level="INFO">Clicking button 'xpath=//button[text()="Log in"]'.</msg>
+<arg>xpath=//button[text()="Log in"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-01T12:50:31.259207" elapsed="0.176037"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:50:30.536138" elapsed="0.899303"/>
+</kw>
+<kw name="Verify Login Successful" owner="LoginPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=nameofuser</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-01T12:50:31.436914" elapsed="1.514118"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:33.091311" level="INFO">Element 'id=nameofuser' contains text 'Welcome'.</msg>
+<arg>id=nameofuser</arg>
+<arg>Welcome</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-01T12:50:32.951810" elapsed="0.139713"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:33.326099" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/login_page.png"&gt;&lt;img src="../Screenshots/login_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/login_page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-01T12:50:33.092239" elapsed="0.234235"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:50:31.436056" elapsed="1.890848"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-01T12:50:33.328007" elapsed="2.398686"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:50:24.886794" elapsed="10.841038"/>
+</test>
+<test id="s1-t2" name="Logo Test" line="17">
+<kw name="Navigate to home page" owner="HomePage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:35.736558" level="INFO">Opening browser 'chrome' to base url 'https://demoblaze.com/index.html'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-01T12:50:35.735364" elapsed="5.032380"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-01T12:50:40.768103" elapsed="0.054499"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-06-01T12:50:40.823106" elapsed="0.004904"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:41.139678" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/home_page.png"&gt;&lt;img src="../Screenshots/home_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/home_page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-01T12:50:40.828560" elapsed="0.311302"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:50:35.733727" elapsed="5.406356"/>
+</kw>
+<kw name="Verify the logo is displayed" owner="HomePage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:41.188925" level="INFO">Element 'xpath=//a[@class="navbar-brand"]' is displayed.</msg>
+<arg>xpath=//a[@class="navbar-brand"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-01T12:50:41.141201" elapsed="0.047910"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:41.339404" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/logo.png"&gt;&lt;img src="../Screenshots/logo.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/logo.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-01T12:50:41.189486" elapsed="0.150015"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:50:41.140707" elapsed="0.198941"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-01T12:50:41.340088" elapsed="2.303799"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:50:35.731145" elapsed="7.914503"/>
+</test>
+<test id="s1-t3" name="Product Display Test" line="21">
+<kw name="Navigate to home page" owner="HomePage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:43.654902" level="INFO">Opening browser 'chrome' to base url 'https://demoblaze.com/index.html'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-01T12:50:43.653859" elapsed="6.093947"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-01T12:50:49.748319" elapsed="0.092706"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-06-01T12:50:49.841428" elapsed="0.004148"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:50.117392" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/home_page.png"&gt;&lt;img src="../Screenshots/home_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/home_page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-01T12:50:49.845824" elapsed="0.271770"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:50:43.652577" elapsed="6.465244"/>
+</kw>
+<kw name="Verify all products displayed" owner="ProductPage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:50.155305" level="INFO">Element 'id=tbodyid' is displayed.</msg>
+<arg>id=tbodyid</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-01T12:50:50.120266" elapsed="0.035139"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:50.303330" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/product_display.png"&gt;&lt;img src="../Screenshots/product_display.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/product_display.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-01T12:50:50.155628" elapsed="0.147798"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:50:50.119089" elapsed="0.184438"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-01T12:50:50.303947" elapsed="2.324469"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:50:43.649860" elapsed="8.979485"/>
+</test>
+<test id="s1-t4" name="Product Details Test" line="25">
+<kw name="Navigate to home page" owner="HomePage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:52.637040" level="INFO">Opening browser 'chrome' to base url 'https://demoblaze.com/index.html'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-01T12:50:52.636099" elapsed="5.185258"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-01T12:50:57.822291" elapsed="0.091565"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-06-01T12:50:57.914248" elapsed="0.002205"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:58.177720" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/home_page.png"&gt;&lt;img src="../Screenshots/home_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/home_page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-01T12:50:57.916874" elapsed="0.261081"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:50:52.634857" elapsed="5.543329"/>
+</kw>
+<kw name="Click first product" owner="ProductPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:58.180162" level="INFO">Clicking element 'xpath=//a[text()='Samsung galaxy s6']'.</msg>
+<arg>xpath=//a[text()='Samsung galaxy s6']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-01T12:50:58.179786" elapsed="0.858336"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:59.713328" level="INFO">Current page contains element '//a[text()='Add to cart']'.</msg>
+<arg>//a[text()='Add to cart']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-06-01T12:50:59.038751" elapsed="0.674786"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:50:58.179052" elapsed="1.534717"/>
+</kw>
+<kw name="Verify product details" owner="ProductPage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=more-information</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-01T12:50:59.715702" elapsed="0.029615"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:59.796796" level="INFO">Element 'id=more-information' is displayed.</msg>
+<arg>id=more-information</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-01T12:50:59.745899" elapsed="0.051141"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:50:59.966117" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/product_details.png"&gt;&lt;img src="../Screenshots/product_details.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/product_details.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-01T12:50:59.797542" elapsed="0.168672"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:50:59.714712" elapsed="0.251615"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-01T12:50:59.966855" elapsed="2.339031"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:50:52.632550" elapsed="9.673909"/>
+</test>
+<test id="s1-t5" name="Add To Cart Test" line="31">
+<kw name="Navigate to home page" owner="HomePage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:51:02.310753" level="INFO">Opening browser 'chrome' to base url 'https://demoblaze.com/index.html'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-01T12:51:02.310307" elapsed="5.346790"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-01T12:51:07.657326" elapsed="0.063100"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-06-01T12:51:07.720710" elapsed="0.005210"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:51:07.987707" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/home_page.png"&gt;&lt;img src="../Screenshots/home_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/home_page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-01T12:51:07.726738" elapsed="0.261105"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:51:02.309575" elapsed="5.678556"/>
+</kw>
+<kw name="Click first product" owner="ProductPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:51:07.990472" level="INFO">Clicking element 'xpath=//a[text()='Samsung galaxy s6']'.</msg>
+<arg>xpath=//a[text()='Samsung galaxy s6']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-01T12:51:07.989481" elapsed="0.911496"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:51:09.643845" level="INFO">Current page contains element '//a[text()='Add to cart']'.</msg>
+<arg>//a[text()='Add to cart']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-06-01T12:51:08.901368" elapsed="0.742585"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:51:07.988799" elapsed="1.655274"/>
+</kw>
+<kw name="Add Product To Cart" owner="CartPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:51:09.645107" level="INFO">Clicking element 'xpath=//a[text()='Add to cart']'.</msg>
+<arg>xpath=//a[text()='Add to cart']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-01T12:51:09.644906" elapsed="0.308381"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:51:09.954287" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>text=Product added</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2025-06-01T12:51:09.953899" elapsed="1.025019"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:51:09.644569" elapsed="1.334667"/>
+</kw>
+<kw name="Go To Cart" owner="CartPage">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:51:10.980871" level="INFO">Clicking link 'Cart'.</msg>
+<arg>Cart</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-01T12:51:10.980533" elapsed="0.787160"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:51:10.979905" elapsed="0.788155"/>
+</kw>
+<kw name="Verify Product In Cart" owner="CartPage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//td[text()="Samsung galaxy s6"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-01T12:51:11.770482" elapsed="1.085232"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-06-01T12:51:13.059934" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../Screenshots/product_added.png"&gt;&lt;img src="../Screenshots/product_added.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>../Screenshots/product_added.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-06-01T12:51:12.856187" elapsed="0.203898"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:51:11.769330" elapsed="1.290952"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-01T12:51:13.061092" elapsed="2.400445"/>
+</kw>
+<status status="PASS" start="2025-06-01T12:51:02.308167" elapsed="13.154452"/>
+</test>
+<doc>End-to-End Testing of Demoblaze Website</doc>
+<status status="PASS" start="2025-06-01T12:50:24.657472" elapsed="50.809410"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="TestDemoblaze">TestDemoblaze</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
